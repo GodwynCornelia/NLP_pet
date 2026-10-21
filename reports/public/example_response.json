@@ -1,0 +1,28 @@
+{
+  "request": {
+    "text": "My card payment appears twice in the app."
+  },
+  "response": {
+    "run_id": "2026-10-20T16-06-04.937473Z-76b6db38",
+    "predicted_category": "transaction_charged_twice",
+    "confidence": 0.7462266683578491,
+    "top_predictions": [
+      {
+        "category": "transaction_charged_twice",
+        "score": 0.7462266683578491
+      },
+      {
+        "category": "card_payment_not_recognised",
+        "score": 0.10417503118515015
+      },
+      {
+        "category": "reverted_card_payment?",
+        "score": 0.04974436014890671
+      }
+    ],
+    "routing_decision": "auto_route",
+    "threshold": 0.41993725299835205,
+    "warnings": []
+  },
+  "scope": "shortened saved HTTP response; request from scripts/smoke_http.py"
+}

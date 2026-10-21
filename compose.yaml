@@ -1,0 +1,40 @@
+services:
+  api:
+    build: .
+    image: support-router:local
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ARTIFACT_DIR: /app/artifacts
+      REPORTS_DIR: /app/reports
+      HF_HUB_OFFLINE: "1"
+      TRANSFORMERS_OFFLINE: "1"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    volumes:
+      - ./data:/app/data:ro
+      - ./artifacts:/app/artifacts:ro
+      - ./reports:/app/reports:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready', timeout=5)"]
+      interval: 10s
+      timeout: 6s
+      retries: 12
+      start_period: 90s
+  ui:
+    image: support-router:local
+    command: ["streamlit", "run", "src/support_router/ui/app.py", "--server.address=0.0.0.0", "--server.port=8501", "--server.maxUploadSize=5", "--browser.gatherUsageStats=false"]
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      API_BASE_URL: http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+  prepare:
+    image: support-router:local
+    profiles: [tools]
+    command: ["python", "-m", "support_router", "bootstrap"]
+    volumes:
+      - ./data:/app/data
+      - ./artifacts:/app/artifacts
+      - ./reports:/app/reports

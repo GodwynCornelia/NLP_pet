@@ -1,0 +1,163 @@
+{
+  "run_id": "2026-10-20T16-06-04.937473Z-76b6db38",
+  "selection_split": "validation_model",
+  "selected_before_test": true,
+  "rule": {
+    "macro_f1_tolerance": 0.005,
+    "latency_tie_ratio": 0.05,
+    "tie_preference": "tfidf_then_smaller_C"
+  },
+  "winner": "minilm-C4",
+  "candidates": [
+    {
+      "id": "tfidf-C0.5",
+      "family": "tfidf",
+      "C": 0.5,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.8152101400933957,
+        "macro_f1": 0.7955221012269716,
+        "weighted_f1": 0.8108113903868917,
+        "top3_accuracy": 0.9306204136090727
+      },
+      "training_seconds": 3.696719600000506,
+      "converged": true,
+      "latency": {
+        "median_ms": 1.1770000000979053,
+        "p95_ms": 1.9158699998570228,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    },
+    {
+      "id": "tfidf-C1",
+      "family": "tfidf",
+      "C": 1.0,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.8405603735823882,
+        "macro_f1": 0.8328119177055003,
+        "weighted_f1": 0.8390523007412197,
+        "top3_accuracy": 0.9459639759839893
+      },
+      "training_seconds": 4.5797474000000875,
+      "converged": true,
+      "latency": {
+        "median_ms": 1.0877999998228916,
+        "p95_ms": 1.3356450000628683,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    },
+    {
+      "id": "tfidf-C4",
+      "family": "tfidf",
+      "C": 4.0,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.8705803869246164,
+        "macro_f1": 0.8736884777612639,
+        "weighted_f1": 0.8708243791768793,
+        "top3_accuracy": 0.9546364242828552
+      },
+      "training_seconds": 6.540160999999898,
+      "converged": true,
+      "latency": {
+        "median_ms": 1.6298999998980435,
+        "p95_ms": 2.7529000004960826,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    },
+    {
+      "id": "minilm-C0.5",
+      "family": "minilm",
+      "C": 0.5,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.8919279519679787,
+        "macro_f1": 0.8898928482687828,
+        "weighted_f1": 0.8906933261141372,
+        "top3_accuracy": 0.9613075383589059
+      },
+      "training_seconds": 1.8043604000004052,
+      "converged": true,
+      "latency": {
+        "median_ms": 23.5237000001689,
+        "p95_ms": 33.285274999980174,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    },
+    {
+      "id": "minilm-C1",
+      "family": "minilm",
+      "C": 1.0,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.9032688458972649,
+        "macro_f1": 0.905441274243798,
+        "weighted_f1": 0.9028413363835386,
+        "top3_accuracy": 0.9686457638425617
+      },
+      "training_seconds": 2.158078299999943,
+      "converged": true,
+      "latency": {
+        "median_ms": 23.088049999842042,
+        "p95_ms": 31.90505499969731,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    },
+    {
+      "id": "minilm-C4",
+      "family": "minilm",
+      "C": 4.0,
+      "metrics": {
+        "n": 1499,
+        "accuracy": 0.9152768512341561,
+        "macro_f1": 0.9179814113309464,
+        "weighted_f1": 0.914999979530505,
+        "top3_accuracy": 0.9739826551034023
+      },
+      "training_seconds": 2.703818500000125,
+      "converged": true,
+      "latency": {
+        "median_ms": 19.02315000006638,
+        "p95_ms": 26.93853999981002,
+        "n": 100,
+        "warmup": 10,
+        "batch_size": 1,
+        "http_included": false,
+        "network": false,
+        "retrieval_included": false,
+        "split": "validation_model"
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "run_id": "2026-10-20T16-06-04.937473Z-76b6db38",
+  "mode": "full",
+  "split": "official_test",
+  "model": "minilm-C4",
+  "n": 3080,
+  "accuracy": 0.9175324675324675,
+  "macro_f1": 0.9173880677241317,
+  "weighted_f1": 0.9173880677241317,
+  "top3_accuracy": 0.9824675324675325,
+  "routing": {
+    "n": 3080,
+    "accepted_count": 2776,
+    "accepted_correct": 2657,
+    "coverage": 0.9012987012987013,
+    "manual_review_rate": 0.09870129870129873,
+    "accepted_accuracy": 0.9571325648414986,
+    "accepted_accuracy_wilson95": [
+      0.9489445252920157,
+      0.9640571827538482
+    ]
+  },
+  "manifest_sha256": "77eb5cbbb478d7e0fca95e2dd6597e7ca4289467e0226a06b5655500bf7be675",
+  "selection_sha256": "35e2d886febc5a2005e832400984329971738f5aedf2c455278c0c2ec0431049",
+  "policy_sha256": "564b201b1e6fb072f59b06a0af46cc6be662eb2ba848a25a8571c36161c27a55",
+  "decision_counts": {
+    "all": {
+      "total": 3080,
+      "correct": 2826,
+      "errors": 254
+    },
+    "auto_route": {
+      "total": 2776,
+      "correct": 2657,
+      "errors": 119
+    },
+    "manual_review": {
+      "total": 304,
+      "correct": 169,
+      "errors": 135
+    },
+    "top3_correct": 3026
+  }
+}

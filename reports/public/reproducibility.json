@@ -1,0 +1,203 @@
+{
+  "status": "passed",
+  "run_id": "2026-10-21T04-28-44.192246Z-949706ba",
+  "reproduction_of": "2026-10-20T16-06-04.937473Z-76b6db38",
+  "platform": "linux/amd64 Docker Desktop",
+  "test_previously_viewed": true,
+  "purpose": "fixed_protocol_reproduction_not_new_test_tuning",
+  "project_caches_before_start": false,
+  "project_outputs_before_start": false,
+  "manually_copied_resource_files": false,
+  "original_experiment_unchanged": true,
+  "frozen_artifact_hashes_unchanged_after_restart": true,
+  "dependencies": "uv sync --frozen --no-dev --no-cache",
+  "successful_stages": [
+    {
+      "name": "compose_config",
+      "exit_code": 0,
+      "seconds": 0.20300000000133878
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "seconds": 948.2969999999987
+    },
+    {
+      "name": "prepare",
+      "exit_code": 0,
+      "seconds": 366.609000000004
+    },
+    {
+      "name": "up",
+      "exit_code": 0,
+      "seconds": 40.92199999999866
+    },
+    {
+      "name": "ui_to_api",
+      "exit_code": 0,
+      "seconds": 1.5
+    },
+    {
+      "name": "http_offline_smoke",
+      "exit_code": 0,
+      "seconds": 5.6560000000026776
+    },
+    {
+      "name": "verify_offline",
+      "exit_code": 0,
+      "seconds": 27.077999999994063
+    },
+    {
+      "name": "network_none_inference",
+      "exit_code": 0,
+      "seconds": 58.187000000005355
+    },
+    {
+      "name": "original_artifacts_linux_portability",
+      "exit_code": 0,
+      "seconds": 41.67199999999866
+    },
+    {
+      "name": "restart",
+      "exit_code": 0,
+      "seconds": 2.125
+    },
+    {
+      "name": "wait_after_restart",
+      "exit_code": 0,
+      "seconds": 10.98399999999674
+    },
+    {
+      "name": "smoke_after_restart",
+      "exit_code": 0,
+      "seconds": 2.5160000000032596
+    },
+    {
+      "name": "runtime_logs",
+      "exit_code": 0,
+      "seconds": 0.5470000000059372
+    }
+  ],
+  "test": {
+    "run_id": "2026-10-21T04-28-44.192246Z-949706ba",
+    "mode": "full",
+    "split": "official_test",
+    "model": "minilm-C4",
+    "n": 3080,
+    "accuracy": 0.9175324675324675,
+    "macro_f1": 0.9173880677241317,
+    "weighted_f1": 0.9173880677241317,
+    "top3_accuracy": 0.9824675324675325,
+    "routing": {
+      "n": 3080,
+      "accepted_count": 2776,
+      "accepted_correct": 2657,
+      "coverage": 0.9012987012987013,
+      "manual_review_rate": 0.09870129870129873,
+      "accepted_accuracy": 0.9571325648414986,
+      "accepted_accuracy_wilson95": [
+        0.9489445252920157,
+        0.9640571827538482
+      ]
+    },
+    "manifest_sha256": "f2fb8aedaaef8e8a57370a4ea7b1c8ea9d25d2bd472665a89b952d0f4edd31e7",
+    "selection_sha256": "a2b865f14f13ce63884ecaa67656d263500e96399ce5fc04e19392222f8363cb",
+    "policy_sha256": "209f04541e555f5b311a67074fe36d081c4b1731dff7233d48532afecc9353f5"
+  },
+  "policy": {
+    "schema_version": 1,
+    "run_id": "2026-10-21T04-28-44.192246Z-949706ba",
+    "created_at": "2026-10-21T04:32:31.674136+00:00",
+    "auto_routing_enabled": true,
+    "threshold": 0.41994646191596985,
+    "target_accuracy": 0.95,
+    "min_accepted": 100,
+    "selection_split": "validation_policy",
+    "n": 1499,
+    "validation_metrics": {
+      "n": 1499,
+      "accepted_count": 1380,
+      "accepted_correct": 1311,
+      "coverage": 0.9206137424949966,
+      "manual_review_rate": 0.07938625750500339,
+      "accepted_accuracy": 0.95,
+      "accepted_accuracy_wilson95": [
+        0.9372001778302269,
+        0.960301477495542
+      ]
+    },
+    "classifier_sha256": "7b4eeacde0b3ce33ec67aca05d5847597ff63f3b49ffc7725cce5755db95f44c",
+    "selection_sha256": "a2b865f14f13ce63884ecaa67656d263500e96399ce5fc04e19392222f8363cb",
+    "split_manifest_sha256": "f5d4ace884b9f7abfbe65a18221de05dab9a2dca75a2173afbdc7a9d07e927fe"
+  },
+  "full_ml_reproduction_count": 1,
+  "primary_audit": {
+    "status": "passed",
+    "checks": [
+      "raw_hashes",
+      "splits_reproduced",
+      "77_classes_each",
+      "no_duplicate_overlap",
+      "train_fit_only_index",
+      "tfidf_vocabulary_and_idf_fit_only",
+      "classifier_classes_alignment",
+      "six_validation_scores",
+      "policy_hash_link",
+      "per_class",
+      "confusion_matrix",
+      "error_rows",
+      "latency_protocol",
+      "verification"
+    ]
+  },
+  "original_hashes_unchanged": {
+    "selection": "35e2d886febc5a2005e832400984329971738f5aedf2c455278c0c2ec0431049",
+    "policy": "564b201b1e6fb072f59b06a0af46cc6be662eb2ba848a25a8571c36161c27a55",
+    "classifier": "f4dd877e2f74f43ebfef2b10c359a17f5341ff65a982ceed2ceb12d4f5e814f0",
+    "manifest": "77eb5cbbb478d7e0fca95e2dd6597e7ca4289467e0226a06b5655500bf7be675",
+    "test_metrics": "3ae86bec825fcf657cc540966f8a68d683f613ceceb2616ae7df1f4851a68fd3",
+    "current_pointer": "e96c3d52a189d7dd14f359cd6e0ef95223660b76cf59fd4917672e956a9e92af"
+  },
+  "manual_review": {
+    "status": "partially_confirmed_by_user_screenshots",
+    "confirmed": [
+      "three_russian_tabs_and_english_notice",
+      "initial_empty_submit_disabled",
+      "first_predict_top3_route_similar_examples",
+      "paraphrased_predict_same_category",
+      "csv_four_row_preview_duplicate_ids_extra_and_literal_NA",
+      "csv_four_row_results_order_unique_row_ids_two_predictions_two_item_errors",
+      "empty_and_overlong_rows_show_invalid_text",
+      "validation_six_rows_separate_from_test",
+      "test_metrics_and_routing_match_primary_report_at_display_precision",
+      "confusion_table_and_error_examples_visible"
+    ],
+    "not_confirmed": [
+      "download_button_and_downloaded_csv_content",
+      "visual_long_input_truncation_warning",
+      "manual_browser_metadata_comparison"
+    ],
+    "screenshots_in_repository": false,
+    "student_error_analysis_performed": false
+  },
+  "provenance": {
+    "reports/finishing/clean_reproduction.json": {
+      "sha256": "cb334960d94f79fce1961ee3aec25350ce9c1e4d151999a90ade11ba91d201a8"
+    },
+    "reports/finishing/completion.json": {
+      "sha256": "f67847921e97e0f8785ad748d51017be35031b5a9bd1b64241deb26ce4071300"
+    },
+    "reports/finishing/primary_report_audit.json": {
+      "sha256": "08b75904fdcd799a9759b3d79810fb0fad9de25ffd83e203e77c0c03d66c044a"
+    },
+    "reports/finishing/manual_ui_review.json": {
+      "sha256": "d0665551aa80b11e636a4a7a34d61d668ecd047ae0022db54d8f399b3599cfa4"
+    },
+    "reports/finishing/linux-reproduction/test_metrics.json": {
+      "sha256": "4e60cca28d00e3b332c392a5824036d147a517ce150c744c488fc680b53dff38"
+    },
+    "reports/finishing/linux-reproduction/artifact_policy.json": {
+      "sha256": "209f04541e555f5b311a67074fe36d081c4b1731dff7233d48532afecc9353f5"
+    }
+  }
+}

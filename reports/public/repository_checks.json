@@ -1,0 +1,56 @@
+{
+  "checked_at": "2026-10-21T06:42:37.898901+00:00",
+  "scope": "source-only portfolio copy with locked installed dependencies reused; no new ML training",
+  "source_only_copy_had_data_or_weights": false,
+  "frozen_installation_check": "uv sync --frozen --dry-run; not another full dependency installation",
+  "checks": [
+    {
+      "name": "copied_package_import",
+      "exit_code": 0,
+      "seconds": 0.2649999999994179
+    },
+    {
+      "name": "frozen_sync_dry_run",
+      "exit_code": 0,
+      "seconds": 0.5469999999986612
+    },
+    {
+      "name": "cli_help",
+      "exit_code": 0,
+      "seconds": 0.4219999999986612
+    },
+    {
+      "name": "pytest_clean_sources",
+      "exit_code": 0,
+      "seconds": 50.59300000000076
+    },
+    {
+      "name": "ruff_check_clean_sources",
+      "exit_code": 0,
+      "seconds": 0.20300000000133878
+    },
+    {
+      "name": "ruff_format_clean_sources",
+      "exit_code": 0,
+      "seconds": 0.17199999999866122
+    },
+    {
+      "name": "compose_configuration",
+      "exit_code": 0,
+      "seconds": 0.3280000000013388
+    },
+    {
+      "name": "offline_integration_existing_run",
+      "exit_code": 0,
+      "seconds": 15.5
+    },
+    {
+      "name": "pytest_public_reports_after_lf",
+      "exit_code": 0,
+      "seconds": 1.8130000000019209
+    }
+  ],
+  "pytest_default_summary": "....................................                                     [100%]\n36 passed, 1 deselected in 48.59s",
+  "pytest_integration_summary": ".                                                                        [100%]\n1 passed, 36 deselected in 13.53s",
+  "latest_export_tests_summary": "...                                                                      [100%]\n3 passed in 0.85s"
+}

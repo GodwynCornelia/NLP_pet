@@ -1,0 +1,25 @@
+[project]
+seed = 42
+data_dir = "data"
+artifact_dir = "artifacts"
+reports_dir = "reports"
+
+[model]
+encoder_id = "sentence-transformers/all-MiniLM-L6-v2"
+batch_size = 32
+threads = 4
+c_values = [0.5, 1.0, 4.0]
+max_iter = 2000
+tie_f1 = 0.005
+latency_indistinguishable_ratio = 0.05
+
+[policy]
+target_accuracy = 0.95
+min_accepted = 100
+
+[limits]
+max_text_chars = 4000
+max_batch = 100
+max_body_bytes = 2097152
+csv_bytes = 5242880
+csv_rows = 1000

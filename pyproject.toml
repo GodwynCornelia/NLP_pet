@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "support-router"
+version = "0.1.0"
+description = "Reproducible BANKING77 classification and selective routing on CPU"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy>=2.0", "pandas>=2.2", "scikit-learn>=1.6", "torch>=2.6",
+  "sentence-transformers>=3.4", "huggingface-hub>=0.29", "fastapi>=0.115",
+  "pydantic>=2.10", "uvicorn>=0.34", "streamlit>=1.42", "httpx>=0.28",
+  "joblib>=1.4", "matplotlib>=3.9", "psutil>=6", "threadpoolctl>=3.5", "editables>=0.5",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+support-router = "support_router.__main__:main"
+
+[tool.hatch.build]
+dev-mode-exact = true
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: explicit offline integration with real local artifacts"]
+addopts = "-m 'not integration'"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
